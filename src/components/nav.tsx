@@ -7,9 +7,10 @@ export default function Nav(){
 
 
     return(
-        <div className="flex flex-row justify-around items-center">
-            <h1>Context</h1>
-            <button type="button" onClick={context?.toggleTheme}>{context?.theme}</button>
+        <div className="flex flex-row justify-around items-center w-[100%] h-12">
+            <h1 className="font-bold">Context Exercise</h1>
+            <button
+                type="button" onClick={context?.toggleTheme}>{context?.theme}</button>
         </div>
     )
 }

@@ -3,5 +3,5 @@ export interface User{
 }
 
 export default interface AuthTypes{
-    user: User;
+    user: User | undefined;
 }
