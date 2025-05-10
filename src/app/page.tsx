@@ -12,10 +12,13 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center min-h-screen min-w-screen">
       <Nav/>
-      <div className={`bg-${context?.theme} min-h-screen min-w-screen flex flex-col items-center justify-center`}>
+      <div className={`${context?.theme == "white" ? "bg-white":"bg-black"} min-h-screen min-w-screen
+      flex flex-col items-center justify-center`}>
         {auth?.user ? 
         (
-          <h1>Olá Fulano</h1>
+          <h1
+          className={`font-bold text-center text-2xl ${context?.theme == "white" ? "text-black":"text-white"}`}
+          >Seja Bem-Vindo!<br/>{auth.user.name}</h1>
         ) : (
           <Form></Form>
         )}
